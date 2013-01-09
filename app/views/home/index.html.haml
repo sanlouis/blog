@@ -1,0 +1,10 @@
+.heading
+  %h2
+    My latest posts
+    .heading_date #{Date.today}
+  %hr
+
+- @posts.each do |p|
+  %h3= p.title
+  %p= p.created_at.strftime("Written on %d-%m-%Y")
+  %p= p.body

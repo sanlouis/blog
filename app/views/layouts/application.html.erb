@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cape Town Randalls</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <h1>Synonyms for poetry</h1>
+  <div class= "content">
+
+    <%- if flash[:notice] %>
+      <div class='flash_notice'>
+        <%= flash[:notice] %>
+      </div>
+    <%- end %>
+
+    <div class="yield">
+      <%= yield %>
+    </div>
+
+    <br />
+
+    <hr />
+
+    <div id="contact"> <strong>Contact details</strong>: 0836875449, visit me on linkedin: sandra_link123 or tweets to me #sanlouis </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.heading
+  %h2
+    Edit posts existing posts:
+    #link.new= link_to 'new post', new_post_path
+  %hr
+
+- @posts.each do |p|
+  %h3= p.title
+  %p= p.body
+  = p.created_at
+  #link.edit= link_to 'edit post', edit_post_path(p)
+  #link.delete= link_to 'delete post', post_path(p), method: :delete
+
+- if @posts.empty?
+  %p You haven't created any posts yet!
